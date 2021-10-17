@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Aulas from "./pages/Aulas/Aulas";
-import Login from "./pages/Login";
+import Login from "./pages/Login/Login";
 
 
 
@@ -10,6 +10,8 @@ const Routes = () => {
         <BrowserRouter>
             <Switch>
                 <Route path="/" exact component={Aulas} />
+                <Route path="/Login" exact component={Login} />
+                <Route path="/Register" exact component={Login} />
             </Switch>
         </BrowserRouter>
     );
