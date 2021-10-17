@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 
-import Portal from './Portal';
-import { Overlay, Dialog } from './styles';
+import Portal from './portal/Portal';
+import { Overlay, Dialog } from './style.js';
 
 const Modal = ({ children, open, onClose }) => {
     useEffect(() => {

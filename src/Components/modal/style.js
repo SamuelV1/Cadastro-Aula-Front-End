@@ -27,5 +27,6 @@ export const Dialog = styled.div`
   background-color: #ffffff;
   box-shadow: 0px 0px 32px rgba(78, 89, 131, 0.2);
   border-radius: 8px;
+  overflow-y: scroll;
 `;
 Dialog.displayName = 'Dialog';
