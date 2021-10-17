@@ -56,3 +56,28 @@ export const RemoveIcon = styled(icon.Plus)`
   margin: 0;
   transform: rotate(45deg);
 `
+export const Diviser = styled.h1`
+   overflow: hidden;
+  text-align: center;
+
+:before,
+:after {
+  background-color: #000;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  position: relative;
+  vertical-align: middle;
+  width: 50%;
+}
+
+:before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+
+:after {
+  left: 0.5em;
+  margin-right: -50%;
+}
+`

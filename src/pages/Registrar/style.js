@@ -3,6 +3,9 @@ import styled from 'styled-components/macro'
 export const Form = styled.form`
 display: flex;
 flex-direction: column;
+span{
+	margin: 1em;
+}
 `
 export const Container = styled.div`
     height: 100vh;
@@ -15,6 +18,8 @@ export const Container = styled.div`
 h1{
     color: #98C222;
     margin-bottom: 1em;
+	position: absolute; 
+	top: 5%;
 }
 `
 
@@ -51,4 +56,11 @@ export const Submit = styled.input`
         background:linear-gradient(to bottom,  rgb(255, 148, 166) 5%,  rgb(175, 114, 124) 100%);
 	background-color: rgb(255, 148, 166);
     }
+`
+export const Registrar = styled.a`
+color: rgb(21, 52, 145);
+  text-decoration: none;
+:hover{
+    filter: brightness(0.9);
+}
 `
