@@ -10,7 +10,7 @@ import * as S from './style'
 // lib pra transformar o conteudo em markdown 
 import 'highlight.js/styles/github.css'
 import marked from 'marked'
-
+// isso e config do highlight.js no caso pra fazer o markdown
 import('highlight.js').then(hljs => {
     const h = hljs.default
 
@@ -30,9 +30,12 @@ export default function Aulas() {
     const [Aula, addAulas] = useState([]);
 
     const [Aulaativa, ativar] = useState();
-    function onRemoveFile(value, event) {
+
+    function onRemoveFile(index, event) {
         event.stopPropagation();
-        console.log(value)
+        let array = [...Aula]
+        array.splice(index, 1)
+        addAulas(array)
     }
     function Activate(value) {
         ativar(Aula[value])
@@ -53,7 +56,7 @@ export default function Aulas() {
                             <S.RemoveIcon />
                         </S.DeleteButton>
                     </S.AulaContainer>
-                )) : <h1>Nenhuma Aula registrada</h1>}
+                )) : <p>&#1F615</p>}
             </S.Container>
             <Modal open={open} onClose={() => setOpen(false)} >
                 {Aulaativa ? <div><h1>{Aulaativa.Titulo}</h1> <article dangerouslySetInnerHTML={{ __html: marked(Aulaativa.Conteudo) }}></article></div> : <h1>Erro</h1>}

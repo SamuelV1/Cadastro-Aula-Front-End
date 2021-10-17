@@ -5,8 +5,9 @@ export const Header = styled.header`
 display: flex;
 justify-content: center;
 align-items: center;
-border-bottom: 1px solid grey;
+border-bottom: 4px solid #98C222;
 height: 4em;
+background-color: #55468F;
 
 `
 export const Container = styled.div`
@@ -25,6 +26,9 @@ border-radius: 5px;
 :hover{
     filter: brightness(0.9);
     cursor: pointer;
+}
+h4{
+    margin-bottom: 1em;
 }
 `
 export const DeleteButton = styled.button`

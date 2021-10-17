@@ -5,6 +5,8 @@ import { useState } from 'react';
 import Modal from '../modal';
 // my styled component import
 import * as S from './style'
+// my svgs 
+import * as Icon from '../../ui/icons'
 
 export default function Form({ addAulas, Aula }) {
     const [open, setOpen] = useState(false);
@@ -20,9 +22,9 @@ export default function Form({ addAulas, Aula }) {
 
     return (
         <>
-            <button onClick={() => {
+            <S.AddButton onClick={() => {
                 setOpen(true);
-            }}>Abrir Modal</button>
+            }}> <Icon.Plus></Icon.Plus> Adicionar Aula</S.AddButton>
 
             <Modal open={open} onClose={() => setOpen(false)}>
                 <S.Form onSubmit={submitHandler}>
