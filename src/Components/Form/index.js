@@ -18,6 +18,7 @@ export default function Form({ addAulas, Aula }) {
     function submitHandler(event) {
         event.preventDefault()
         addAulas(prevState => [...prevState, form])
+        setOpen(false)
     }
 
     return (
@@ -29,14 +30,14 @@ export default function Form({ addAulas, Aula }) {
             <Modal open={open} onClose={() => setOpen(false)}>
                 <S.Form onSubmit={submitHandler}>
                     <label htmlFor="Titulo">Titulo Da aula</label>
-                    <input type="text" required onChange={myChangeHandler} name='Titulo' placeholder='Titulo da Aula' />
+                    <S.Input type="text" required onChange={myChangeHandler} maxLength='15' name='Titulo' placeholder='Titulo da Aula' />
 
                     <label htmlFor="Descrição">Descrição</label>
-                    <input type="text" onChange={myChangeHandler} maxlength="20" name='description' placeholder='descrição da aula' />
+                    <S.Input type="text" onChange={myChangeHandler} maxLength="20" name='description' placeholder='descrição da aula' />
 
                     <label htmlFor="Conteudo">Conteudo Da aula</label>
                     <textarea name="Conteudo" required onChange={myChangeHandler} cols="30" rows="10" placeholder='Use Markdown'></textarea>
-                    <input type="submit" value="Adicionar Aula" />
+                    <S.Submit type="submit" value="Adicionar Aula" />
                 </S.Form>
             </Modal>
         </>

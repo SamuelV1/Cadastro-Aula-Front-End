@@ -16,6 +16,10 @@ margin: 4em;
 height: 100%;
 gap: 1em;
 flex-wrap: wrap;
+h6{
+    position: absolute;
+    right: 50%;
+}
 `
 export const AulaContainer = styled.div`
 background-color: #FFDFD3;
@@ -28,7 +32,11 @@ border-radius: 5px;
     cursor: pointer;
 }
 h4{
-    margin-bottom: 1em;
+   margin: 1em 0 1em 0.4em;
+}
+p{
+    margin-left: 1em;
+    word-break: break-all;
 }
 `
 export const DeleteButton = styled.button`

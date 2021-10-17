@@ -56,7 +56,7 @@ export default function Aulas() {
                             <S.RemoveIcon />
                         </S.DeleteButton>
                     </S.AulaContainer>
-                )) : <p>&#1F615</p>}
+                )) : <h6>Nenhuma Aula encontrada</h6>}
             </S.Container>
             <Modal open={open} onClose={() => setOpen(false)} >
                 {Aulaativa ? <div><h1>{Aulaativa.Titulo}</h1> <article dangerouslySetInnerHTML={{ __html: marked(Aulaativa.Conteudo) }}></article></div> : <h1>Erro</h1>}
